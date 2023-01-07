@@ -1,0 +1,14 @@
+.search-form {
+	border-bottom-style: solid;
+  	border-bottom-width: 1px;
+  	border-bottom-color: var(--custom-dark-300);
+}
+
+.search-form button {
+	background-color: var(--custom-dark-300);
+  	border: none;
+}
+
+.search-form button:hover {
+	background-color: var(--custom-purple-100);
+}

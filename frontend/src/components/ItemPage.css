@@ -1,0 +1,73 @@
+.item-page-info, .item-page-comments {
+	border-bottom-style: solid;
+  	border-bottom-width: 1px;
+  	border-bottom-color: var(--custom-dark-300);
+}
+
+.item-page-comments {
+	border-top-style: solid;
+  	border-top-width: 1px;
+  	border-top-color: var(--custom-dark-300);
+}
+
+.info-block .name {
+	font-size: 28px;
+}
+
+.info-block .genre {
+	color: var(--custom-white-300);
+}
+
+.info-block .statistic-block {
+	font-size: 20px;
+}
+
+.info-block .description {
+	color: var(--custom-white-300);
+	text-align: justify;
+}
+
+.item-page-comments .comments-block-title {
+	font-size: 20px;
+	color: var(--custom-purple-200);
+}
+
+.player-wrapper {
+	position: relative;
+  	padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+	position: absolute;
+	top: 0;
+}
+
+.comment-row-name {
+	color: var(--custom-white-300);
+	font-size: 18px;
+}
+
+.comment-row-text {
+	text-align: justify;
+}
+
+.item-page-no-comments {
+	font-size: 30px;
+	color: var(--custom-dark-300);
+}
+
+.comments-add-button .add-button:active,
+.comments-add-button .add-button:hover {
+    background-color: var(--custom-purple-100);
+}
+
+.comments-add-button .add-button {
+    background-color: var(--custom-dark-300);
+  	border: none;
+}
+
+.comments-add-button .add-button:focus {
+    box-shadow: none;
+}
+
+

@@ -1,0 +1,54 @@
+name: uflix
+services:
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    restart: on-failure
+    environment:
+      - PG_USER=postgres
+      - PG_PASSWORD=12345
+      - PG_DB=uflix_db
+      - PG_HOST=database
+      - PG_PORT=5432
+      - SECRET_KEY=django-insecure-t=6#%)9(l)8bl94vb6_kgd+#-)0v!4$ly90zr&ul5j1xji@cuh
+      - DEBUG_FLAG=0
+    ports:
+      - 8000:8000
+    depends_on:
+      - database
+
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+
+  nginx:
+    restart: always
+    build:
+      context: nginx
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - frontend
+
+  database:
+    image: postgres:15.1-alpine
+    restart: always
+    environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=12345
+        - POSTGRES_DB=uflix_db
+    ports:
+      - 5432:5432
+    volumes:
+      - database-data:/var/lib/postgresql/data
+
+volumes:
+  database-data: {}

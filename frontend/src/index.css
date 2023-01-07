@@ -1,0 +1,36 @@
+:root {
+  --custom-white-100: #f4f5f6;
+  --custom-white-200: #e6e6ec;
+  --custom-white-300: #acb0e2;
+  --custom-dark-100: #18192d;
+  --custom-dark-200: #1f1a48;
+  --custom-dark-300: #3d407d;
+  --custom-purple-100: #8190f3;
+  --custom-purple-200: #898ec1;
+  --custom-purple-300: #a2a7db;
+
+  --bs-body-color: var(--custom-white-100);
+  --bs-body-bg: var(--custom-dark-100);
+
+}
+
+html,
+body,
+#root,
+#root .container {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
